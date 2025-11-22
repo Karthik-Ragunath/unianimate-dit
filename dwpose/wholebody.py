@@ -10,8 +10,11 @@ class Wholebody:
         device = 'cuda' # 'cpu' #
         providers = ['CPUExecutionProvider'
                   ] if device == 'cpu' else ['CUDAExecutionProvider']
+        # For now, I have created a symlink to the checkpoints directory in the root of the project.
         onnx_det = 'checkpoints/yolox_l.onnx'
         onnx_pose = 'checkpoints/dw-ll_ucoco_384.onnx'
+        # onnx_det = '/home/ubuntu/karthik-ragunath-ananda-kumar-utah/unianimate-dit/checkpoints/yolox_l.onnx'
+        # onnx_pose = '/home/ubuntu/karthik-ragunath-ananda-kumar-utah/unianimate-dit/checkpoints/dw-ll_ucoco_384.onnx'
 
         self.session_det = ort.InferenceSession(path_or_bytes=onnx_det, providers=providers)
         self.session_pose = ort.InferenceSession(path_or_bytes=onnx_pose, providers=providers)

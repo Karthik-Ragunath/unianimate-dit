@@ -2,3 +2,5 @@ pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https
 pip install wheel
 pip install flash-attn --no-build-isolation
 pip install "huggingface_hub[cli]"
+cd /home/ubuntu/github/UniAnimate-DiT && ln -s /home/ubuntu/karthik-ragunath-ananda-kumar-utah/unianimate-dit/checkpoints checkpoints
+cd /home/ubuntu/github/UniAnimate-DiT && ln -s /home/ubuntu/karthik-ragunath-ananda-kumar-utah/unianimate-dit/Wan2.1-I2V-14B-720P Wan2.1-I2V-14B-720P
